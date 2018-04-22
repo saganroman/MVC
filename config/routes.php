@@ -8,7 +8,9 @@ return array(
     'index' => 'admin/index',
     'messages' => 'admin/messages',
     'home' => 'admin/home',
-    'addMessage' => 'admin/addMessage',
+    'roman' => 'admin/roman',
+    'editmessage' => 'admin/edit',
+    'destroymessage' => 'admin/destroy',
 
 
 );
