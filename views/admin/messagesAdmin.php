@@ -1,6 +1,6 @@
 <blockquote class="blockquote text-center">
 	<h1> Messages board</h1>
-	<button type="button " class="btn btn-info btn-lg" data-toggle="modal" data-target="#addMessageForm">Add message
+	<button type="button " class="btn btn-info btn-lg" data-toggle="modal" data-backdrop="false" data-target="#addMessageForm">Add message
 	</button>
 </blockquote>
 <div class="row">
@@ -28,7 +28,7 @@
 						} ?></td>
 					<td class="menu-action">
 						<div class="pdng5">
-							<a data-toggle="modal" data-target="#editMessageForm"
+							<a data-toggle="modal" data-target="#editMessageForm" data-backdrop="false"
 							   class="btn btn-xs btn-default "> <i class="fas fa-pencil-alt editMessage"></i>
 								</a>
 							<a data-toggle="modal" data-target="#removeMessage"
