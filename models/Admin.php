@@ -44,4 +44,12 @@ class Admin
         return $messagesList;
     }
 
+    public static function addMessage($title, $content, $priority)
+    {
+        $db = Db::getConnection();
+        $result = $db->query('INSERT INTO `messages` (`title`, `content`, `priority`) VALUES ('. '"' .$title. '",' . '"' .$content. '",' .'"' .$priority. '",'.' );');
+
+        return $result;
+    }
+
 }

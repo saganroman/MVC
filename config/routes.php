@@ -7,6 +7,8 @@ return array(
     'signout' => 'admin/signout',
     'index' => 'admin/index',
     'messages' => 'admin/messages',
+    'home' => 'admin/home',
+    'addMessage' => 'admin/addMessage',
 
 
 );
