@@ -1,3 +1,5 @@
+<?php echo'
+<div class="container" id="container">
 <blockquote class="blockquote text-center">
 	<h1> Messages board</h1>
 	<button type="button " class="btn btn-info btn-lg" data-toggle="modal" data-backdrop="false" data-target="#addMessageForm">Add message
@@ -15,31 +17,36 @@
 				<th scope="col">Actions</th>
 			</tr>
 			</thead>
-			<tbody>
-			<?php foreach ($messagesList as $message) : ?>
+			<tbody>';
+			foreach ($messagesList as $message) {echo"
 				<tr>
-					<td> <?php echo $message['id'] ?></td>
-					<td> <?php echo $message['title'] ?></td>
-					<td> <?php echo $message['content'] ?></td>
-					<td> <?php if ((int)$message['priority'] == 1) {
+					<td>  $message[id] </td>
+					<td>  $message[title] </td>
+					<td>  $message[content] </td>
+					<td> ";
+ if ((int)$message["priority"] == 1) {
 							echo 'asc';
 						} else {
 							echo 'desc';
-						} ?></td>
+						}
+				echo'
+				</td>
 					<td class="menu-action">
 						<div class="pdng5">
 							<a data-toggle="modal" data-target="#editMessageForm" data-backdrop="false"
-							   class="btn btn-xs btn-default "> <i class="fas fa-pencil-alt editMessage"></i>
+							   class="btn btn-xs btn-default "> <i class="editMessage">Edit</i>
 								</a>
 							<a data-toggle="modal" data-target="#removeMessage"
-							   class="btn btn-xs btn-default "><i class="fa fa-trash-alt destroyMessage"
+							   class="btn btn-xs btn-default "><i class="destroyMessage"
 							                                                    data-original-title="Remove"
 							                                                    data-toggle="tooltip"
-							                                                    data-placement="top"></i></a>
+							                                                    data-placement="top">Delete</i></a>
 						</div>
 					</td>
 				</tr>
-			<?php endforeach; ?>
+				';
+			}
+			 echo'
 			</tbody>
 		</table>
 	</div>
@@ -127,4 +134,5 @@
 
 	</div>
 </div>
-<script src="/template/js/admin.js"></script>
+</div>
+	';?>

@@ -1,4 +1,5 @@
-
+<?php echo'
+<div class="container" id="container">
     <blockquote class="blockquote text-center">
         <h1> List of users</h1>
     </blockquote>
@@ -12,20 +13,25 @@
                     <th scope="col">User type</th>
                 </tr>
                 </thead>
-                <tbody>
-                <?php foreach ($usersList as $user) : ?>
-                    <tr>
-                        <td> <?php echo $user['id'] ?></td>
-                        <td> <?php echo $user['username'] ?></td>
-                        <td> <?php if ((int)$user['type'] == 1) {
-                                echo 'admin';
-                            } else {
-                                echo 'simple user';
-                            } ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
+                <tbody>';
+foreach ($usersList as $user) {
+    echo " <tr>
+                        <td> $user[id] </td>
+                        <td> $user[username] </td>
+                        <td> ";
+
+    if ((int)$user["type"] == 1) {
+        echo 'admin';
+    } else {
+        echo 'simple user';
+    }
+
+    echo '   </td>
+                    </tr>';
+}
+echo '   </tbody>
             </table>
         </div>
     </div>
-
+</div>
+'; ?>

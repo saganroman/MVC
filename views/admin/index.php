@@ -1,9 +1,5 @@
-<?php
-include_once 'head.php';
-
-?>
-
-
+<?php echo '
+<div class="container" id="container">
     <div class="row">
         <div class="col-md-4 offset-4">
             <span class="alert-success" id="successMessage"></span>
@@ -23,10 +19,5 @@ include_once 'head.php';
 
     </div>
 
-
 </div>
-
-
-</body>
-</html>
-
+    ';
